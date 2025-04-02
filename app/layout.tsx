@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'OSTRICH',
   description: 'Open Source Tracking and Recon Intelligence for Cyber Hunting',
   generator: 'www.sunnypatel.net',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  }
 }
 
 export default function RootLayout({

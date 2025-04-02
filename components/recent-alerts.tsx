@@ -24,7 +24,7 @@ export default function RecentAlerts() {
       try {
         // In a real app, this would be an API call
         const data = await fetchRecentAlerts()
-        setAlerts(data)
+        setAlerts(data as Alert[])
       } catch (error) {
         console.error("Error loading alerts:", error)
       } finally {

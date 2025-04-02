@@ -103,6 +103,43 @@ export default function Home() {
           </TabsContent>
         </Tabs>
       </main>
+
+      <footer className="border-t border-gray-800 bg-gray-900/60 py-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <div className="flex items-center space-x-2">
+              <Shield className="h-5 w-5 text-emerald-500" />
+              <h2 className="text-lg font-bold text-white">OSTRICH</h2>
+            </div>
+            <p className="text-gray-400 text-sm">Open Source Tracking and Recon Intelligence for Cyber Hunting</p>
+
+            <div className="mt-4">
+              <h3 className="text-white font-medium text-center mb-2">Contributors</h3>
+              <div className="flex flex-wrap justify-center gap-4 mt-2">
+                <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-700">
+                  <p className="text-emerald-500 font-medium">Sunny Patel</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-700">
+                  <p className="text-emerald-500 font-medium">Royce Mathew</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-700">
+                  <p className="text-emerald-500 font-medium">Michael Ispahani</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-700">
+                  <p className="text-emerald-500 font-medium">Alyesha Singh</p>
+                </div>
+                <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-700">
+                  <p className="text-emerald-500 font-medium">Freza Majithia</p>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-gray-500 text-xs mt-6">
+              © {new Date().getFullYear()} OSTRICH Project. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

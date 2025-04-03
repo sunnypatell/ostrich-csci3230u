@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
-import { Shield, Activity, Search, AlertTriangle, BarChart3, Globe, Lock } from "lucide-react"
+import { Shield, Activity, Search, AlertTriangle, BarChart3, Globe, LogOut } from "lucide-react"
 import Dashboard from "@/components/dashboard"
 import NetworkMap from "@/components/network-map"
 import VulnerabilityScanner from "@/components/vulnerability-scanner"
@@ -13,6 +13,63 @@ import LoginForm from "@/components/login-form"
 
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [user, setUser] = useState<any>(null)
+
+  // Check if user is already logged in
+  useEffect(() => {
+    async function checkAuthStatus() {
+      try {
+        const response = await fetch("/api/auth/user")
+
+        if (response.ok) {
+          const data = await response.json()
+          setUser(data.user)
+          setIsLoggedIn(true)
+        }
+      } catch (error) {
+        console.error("Error checking auth status:", error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    checkAuthStatus()
+  }, [])
+
+  const handleLogin = () => {
+    setIsLoggedIn(true)
+    // Fetch user data after login
+    fetch("/api/auth/user")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setUser(data.user)
+        }
+      })
+      .catch((error) => console.error("Error fetching user data:", error))
+  }
+
+  const handleLogout = async () => {
+    try {
+      await fetch("/api/auth/logout", { method: "POST" })
+      setIsLoggedIn(false)
+      setUser(null)
+    } catch (error) {
+      console.error("Error logging out:", error)
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="flex flex-col items-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mb-4"></div>
+          <p className="text-gray-400">Loading OSTRICH...</p>
+        </div>
+      </div>
+    )
+  }
 
   if (!isLoggedIn) {
     return (
@@ -25,7 +82,7 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-white mb-2">OSTRICH</h1>
             <p className="text-gray-400">Open Source Tracking and Recon Intelligence for Cyber Hunting</p>
           </div>
-          <LoginForm onLogin={() => setIsLoggedIn(true)} />
+          <LoginForm onLogin={handleLogin} />
         </div>
       </div>
     )
@@ -40,8 +97,16 @@ export default function Home() {
             <h1 className="text-xl font-bold text-white">OSTRICH</h1>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-400 hover:text-white" onClick={() => setIsLoggedIn(false)}>
-              <Lock className="h-4 w-4 mr-2" />
+            {user && (
+              <span className="text-gray-400">
+                Logged in as <span className="text-emerald-500 font-medium">{user.username}</span>
+                {user.role === "admin" && (
+                  <span className="ml-2 bg-emerald-900/50 text-emerald-400 text-xs px-2 py-0.5 rounded">Admin</span>
+                )}
+              </span>
+            )}
+            <Button variant="ghost" className="text-gray-400 hover:text-white" onClick={handleLogout}>
+              <LogOut className="h-4 w-4 mr-2" />
               Logout
             </Button>
           </div>

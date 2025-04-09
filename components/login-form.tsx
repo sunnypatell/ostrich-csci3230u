@@ -78,8 +78,14 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
 
     setIsRegistering(true)
 
+    console.log("Registering user:", JSON.stringify({
+      username: registerUsername,
+      password: registerPassword,
+      email: registerEmail || undefined,
+    }));
+
     try {
-      const response = await fetch("/api/auth/register", {
+      const response = await fetch("/api/auth/login/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

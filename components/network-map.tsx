@@ -267,7 +267,7 @@ export default function NetworkMap() {
             size="sm"
             onClick={handleRefresh}
             disabled={isLoading}
-            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700"
+            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
             Refresh
@@ -276,7 +276,7 @@ export default function NetworkMap() {
             variant="outline"
             size="sm"
             onClick={handleZoomIn}
-            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700"
+            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800"
           >
             <ZoomIn className="h-4 w-4" />
           </Button>
@@ -284,7 +284,7 @@ export default function NetworkMap() {
             variant="outline"
             size="sm"
             onClick={handleZoomOut}
-            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700"
+            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800"
           >
             <ZoomOut className="h-4 w-4" />
           </Button>
@@ -292,7 +292,7 @@ export default function NetworkMap() {
             variant="outline"
             size="sm"
             onClick={handleDownload}
-            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700"
+            className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800"
           >
             <Download className="h-4 w-4 mr-2" />
             Export

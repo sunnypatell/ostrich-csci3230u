@@ -98,7 +98,7 @@ export default function ReportingAnalytics() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700"
+                  className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-700 bg-gray-800"
                 >
                   <Download className="h-4 w-4 mr-2" />
                   Export

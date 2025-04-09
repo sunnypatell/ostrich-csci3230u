@@ -105,7 +105,7 @@ export default function Home() {
                 )}
               </span>
             )}
-            <Button variant="ghost" className="text-gray-400 hover:text-white" onClick={handleLogout}>
+            <Button variant="ghost" className="text-gray-400 hover:text-white hover:bg-gray-800" onClick={handleLogout}>
               <LogOut className="h-4 w-4 mr-2" />
               Logout
             </Button>

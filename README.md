@@ -23,6 +23,17 @@
 17. [Group Contributions](#group-contributions)
 
 ## Project Overview
+### Built in Admin credentials:
+- **Username**: `admin`
+- **Password**: `admin123`
+
+or
+
+- **Username**: `sunny.admin`
+- **Password**: `sunny123`
+
+These credentials are generated upon the build of the application and are stored in the SQLite database. The password is hashed using bcryptjs for security.
+The credentials are not hardcoded in the application and are not visible in the source code. 
 
 ### Development Environment
 
@@ -30,7 +41,7 @@ To set up the development environment:
 
 1. Clone the repository
 2. Install dependencies: `npm ci`
-3. Set up environment variables in `.env.local`: `JWT_SECRET=your_secure_jwt_secret` (not necessary for local development)
+3. Set up environment variables in `.env.local`: `JWT_SECRET=your_secure_jwt_secret` (not necessary for local ASGI prod development)
 4. Start the development server: `npm run dev`
 5. Access the application at `localhost:3000`
 

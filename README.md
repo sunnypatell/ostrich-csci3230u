@@ -5,6 +5,10 @@ Open Source Tracking and Recon Intelligence for Cyber Hunting
 </div>
 
 
+## Demo Video
+[OSTRICH Demo Video](https://drive.google.com/file/d/1Q44rG2tt-xCHtueihPQoP-KC2X5Nwu_i/view?usp=sharing)
+
+
 ## Table of Contents
 - [Demo Video](#demo-video)
 - [Table of Contents](#table-of-contents)
@@ -19,9 +23,6 @@ Open Source Tracking and Recon Intelligence for Cyber Hunting
   - [Development Tools](#development-tools)
 - [Project Structure](#project-structure)
 
-
-## Demo Video
-[OSTRICH Demo Video](https://drive.google.com/file/d/1Q44rG2tt-xCHtueihPQoP-KC2X5Nwu_i/view?usp=sharing)
 
 ## Project Setup
 To set up the project and get it running, you will need the following requirements installed:

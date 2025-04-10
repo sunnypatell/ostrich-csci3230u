@@ -29,7 +29,7 @@
 To set up the development environment:
 
 1. Clone the repository
-2. Install dependencies: `npm install --legacy-peer-deps`
+2. Install dependencies: `npm ci`
 3. Set up environment variables in `.env.local`: `JWT_SECRET=your_secure_jwt_secret` (not necessary for local development)
 4. Start the development server: `npm run dev`
 5. Access the application at `localhost:3000`

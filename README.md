@@ -9,6 +9,9 @@
 3. [Technology Stack](#technology-stack)
 4. [Project Structure](#project-structure)
 
+# Demo Video
+[OSTRICH Demo Video](https://drive.google.com/file/d/1Q44rG2tt-xCHtueihPQoP-KC2X5Nwu_i/view?usp=sharing)
+
 ## Project Overview
 ### Built in Admin credentials:
 - **Username**: `admin`

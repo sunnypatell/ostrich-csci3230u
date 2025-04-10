@@ -1,0 +1,31 @@
+AI Prompts Used for Mock Data Generation
+
+To simulate realistic backend behavior for our project and support frontend development and testing, we used AI to generate mock data for several core functions. These functions include:
+
+- fetchDashboardData
+- fetchRecentAlerts
+- fetchNetworkData
+- fetchVulnerabilities
+- scanTarget
+
+Prompt used:
+"Develop mock data for backend functions with the following function signatures: fetchDashboardData, fetchRecentAlerts, fetchNetworkData, fetchVulnerabilities, scanTarget. Ensure the data resembles real-world scenarios with plausible values, time formats, and security-relevant content."
+
+Overview of Generated Mock Data:
+
+1. fetchDashboardData:
+   Returns system-wide metrics such as total alerts, system health percentages, and scan summaries. Data includes recent activity timestamps and performance indicators.
+
+2. fetchRecentAlerts:
+   Provides a list of recent security alerts. Each alert includes severity, timestamp, source IP, and a short description. Useful for testing alert displays and filtering.
+
+3. fetchNetworkData:
+   Simulates connected devices on the network. Includes device IPs, MAC addresses, OS types, and status. Helps test visual network layouts and interactivity.
+
+4. fetchVulnerabilities:
+   Contains known vulnerabilities (e.g., CVE IDs), severity scores, affected systems, and mitigation advice. Enables building and testing vulnerability management UIs.
+
+5. scanTarget:
+   Simulates the output of a network scan. Returns open ports, detected services, and basic risk assessment data, imitating a real scan result.
+
+Using AI-generated mock data allowed us to build and test frontend components with realistic and meaningful values before actual backend integration was completed.

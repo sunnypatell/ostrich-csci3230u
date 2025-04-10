@@ -1,0 +1,11 @@
+OSTRICH Project - Team Contributions
+
+Sunny Patel
+    * Designed and implemented the core architecture of application.
+    * Built the complex D3.js network visualization system with interactive force-directed graph.
+    * Developed the complete authentication system with SQLite, JWT tokens and secure HTTP-only cookies.
+    * Created the vulnerability scanner backend integration with security tools.
+    * Implemented the dashboard with all interactive D3.js charts and real-time data visualization.
+    * Designed the responsive UI layout and component structure.
+    * Set up the database schema and query optimization.
+    * Integrated the OSINT collection module with fetch sample data API's.

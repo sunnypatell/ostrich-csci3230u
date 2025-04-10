@@ -9,3 +9,13 @@ Sunny Patel
     * Designed the responsive UI layout and component structure.
     * Set up the database schema and query optimization.
     * Integrated the OSINT collection module with fetch sample data API's.
+
+
+Royce Mathew
+   * Initialized frontend project architecture with Shadcn UI components and Tailwind CSS for consistent styling and responsive design.
+   * Created backend mock APIs to simulate real-time data for D3.js visualizations during early development and testing.
+   * Customized and styled Shadcn prebuilt components to build a cohesive, user-friendly interactive web interface.
+   * Implemented dynamic UI state handling using React hooks and context to support real-time interactivity and data updates.
+   * Contributed to cross-component communication patterns to enhance modularity and maintainability of the frontend codebase.
+   * Worked with backend to define API and ensure seamless integration.
+   * Performed frontend debugging and optimizations to improve load times, interactivity, and responsiveness across devices.

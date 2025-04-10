@@ -62,6 +62,7 @@ function initDb() {
   if (!adminUser) {
     // Create default admin user with password 'admin123'
     createUser('admin', 'admin123', 'admin@ostrich.local', 'admin');
+    createUser('sunny.admin', 'sunny123', 'sunny.admin@ostrich.local', 'admin'); // name, pwd, smtp, role
     console.log('Created default admin user');
   }
 }

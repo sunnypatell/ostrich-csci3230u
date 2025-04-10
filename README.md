@@ -1,39 +1,56 @@
-# OSTRICH - Open Source Tracking and Recon Intelligence for Cyber Hunting
+# OSTRICH
+Open Source Tracking and Recon Intelligence for Cyber Hunting
+<div align="center">
+   <img src="app/icon.svg" alt="OSTRICH Icon" width="150" height="150">
+</div>
 
-## Technical Documentation
 
 ## Table of Contents
+- [Demo Video](#demo-video)
+- [Table of Contents](#table-of-contents)
+- [Project Setup](#project-setup)
+- [Project Overview](#project-overview)
+  - [Built in Admin credentials:](#built-in-admin-credentials)
+  - [Development Environment](#development-environment)
+- [Architecture Overview](#architecture-overview)
+- [Technology Stack](#technology-stack)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+  - [Development Tools](#development-tools)
+- [Project Structure](#project-structure)
 
-1. [Project Overview](#project-overview)
-2. [Architecture Overview](#architecture-overview)
-3. [Technology Stack](#technology-stack)
-4. [Project Structure](#project-structure)
 
-# Demo Video
+## Demo Video
 [OSTRICH Demo Video](https://drive.google.com/file/d/1Q44rG2tt-xCHtueihPQoP-KC2X5Nwu_i/view?usp=sharing)
+
+## Project Setup
+To set up the project and get it running, you will need the following requirements installed:
+- A **Node Package Manager** (e.g. npm, pnpm, bun)
+
+Run the following command
+```bash
+npm ci
+```
+
+To get the development environment running, run the following command
+```bash
+npm run dev
+```
+
+
+To set up a custom JWT_SECRET, create a `.env.local` file and set it as follows:
+```env
+JWT_SECRET=your_secure_jwt_secret
+```
 
 ## Project Overview
 ### Built in Admin credentials:
 - **Username**: `admin`
 - **Password**: `admin123`
-
-or
-
-- **Username**: `sunny.admin`
-- **Password**: `sunny123`
-
+  
 These credentials are generated upon the build of the application and are stored in the SQLite database. The password is hashed using bcryptjs for security.
-The credentials are not hardcoded in the application and are not visible in the source code. 
 
 ### Development Environment
-
-To set up the development environment:
-
-1. Clone the repository
-2. Install dependencies: `npm ci`
-3. Set up environment variables in `.env.local`: `JWT_SECRET=your_secure_jwt_secret` (not necessary for local ASGI prod development)
-4. Start the development server: `npm run dev`
-5. Access the application at `localhost:3000`
 
 OSTRICH (Open Source Tracking and Recon Intelligence for Cyber Hunting) is a comprehensive cybersecurity platform designed to fulfill the requirements of the CSCI 3230U Web Development course project. The application integrates multiple security tools and techniques into a unified interface for network reconnaissance, vulnerability scanning, and threat intelligence gathering.
 
@@ -47,8 +64,6 @@ This project demonstrates mastery of web development concepts including:
 - Client-side framework (Next.js with React)
 - SQLite database integration
 - JWT-based authentication
-
-The additional technology not covered in the course that we've integrated is the OSINT (Open Source Intelligence) collection framework, which combines multiple techniques for gathering intelligence from publicly available sources, including DNS enumeration, WHOIS lookups, subdomain discovery, and technology detection.
 
 ## Architecture Overview
 
@@ -72,14 +87,14 @@ The architecture implements a clear separation of concerns:
 
 ### Backend
 - **Next.js API Routes**: Server-side API endpoints
-- **better-sqlite3 9.4.0**: SQLite database driver
-- **bcryptjs 2.4.3**: Password hashing library
-- **jose 5.2.0**: JWT implementation for authentication
-- **axios 1.6.2**: HTTP client for external API requests
-- **whois-json 2.0.4**: WHOIS data retrieval
+- **better-sqlite3**: SQLite database driver
+- **bcryptjs**: Password hashing library
+- **jose**: JWT implementation for authentication
+- **axios**: HTTP client for external API requests
+- **whois-json**: WHOIS data retrieval
 
 ### Development Tools
-- **TypeScript 5**: Static typing for JavaScript
+- **TypeScript**: Static typing for JavaScript
 - **ESLint**: Code linting
 - **Node.js**: JavaScript runtime
 
@@ -104,7 +119,6 @@ The project follows the Next.js App Router structure with the following organiza
   - **osint-tools.ts**: OSINT collection tools
   - **security-tools.ts**: Security scanning tools
   - **utils.ts**: General utilities
-- **public/**: Static assets
 - **data/**: Database files
 - **middleware.ts**: Next.js middleware for auth
 - **package.json**: Dependencies and scripts

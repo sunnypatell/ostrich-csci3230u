@@ -112,10 +112,10 @@ export default function OsintCollector() {
                 id="osint-target"
                 placeholder={
                   activeTab === "domain"
-                    ? "e.g. example.com"
+                    ? "e.g. sunnypatel.com"
                     : activeTab === "person"
-                      ? "e.g. John Smith"
-                      : "e.g. Acme Corp"
+                      ? "e.g. Sunny Patel"
+                      : "e.g. Ontario Tech University"
                 }
                 value={target}
                 onChange={(e) => setTarget(e.target.value)}

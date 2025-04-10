@@ -23,7 +23,7 @@ Alyesha Singh
    * Assisted in debugging both frontend and backend issues throughout development, including resolving asynchronous data handling errors.
    * Contributed to the frontend by building and styling reusable UI components using Shadcn UI and Tailwind CSS.
    * Helped set up route management using React Router and optimized navigation for better UX.
-   * Worked on backend endpoints related to user settings and preferences using Express.js.
+   * Worked on backend endpoints related to user settings and preferences using Next.js.
    * Conducted extensive manual testing and participated in code reviews to ensure stability and maintainability.
    * Helped implement loading states, error boundaries, and conditional rendering for a smoother user experience
 

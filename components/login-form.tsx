@@ -153,7 +153,7 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
                 <Input
                   id="username"
                   type="text"
-                  placeholder="admin"
+                  placeholder="sunny.ostrich"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="bg-gray-800 border-gray-700 text-white"

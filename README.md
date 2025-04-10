@@ -14,12 +14,12 @@ OSTRICH is an open-source project designed to provide advanced tools and techniq
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/ostrich-csci3230u.git
+    git clone https://github.com/sunnypatell/ostrich-csci3230u.git
     cd ostrich-csci3230u
     ```
 2. Install dependencies:
     ```bash
-    npm install
+    npm install --legacy-peer-deps
     ```
 3. Start the application:
     ```bash

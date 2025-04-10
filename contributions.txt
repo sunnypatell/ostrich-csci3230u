@@ -10,7 +10,6 @@ Sunny Patel
     * Set up the database schema and query optimization.
     * Integrated the OSINT collection module with fetch sample data API's.
 
-
 Royce Mathew
    * Initialized frontend project architecture with Shadcn UI components and Tailwind CSS for consistent styling and responsive design.
    * Created backend mock APIs to simulate real-time data for D3.js visualizations during early development and testing.

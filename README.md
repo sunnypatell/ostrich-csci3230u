@@ -23,7 +23,7 @@ OSTRICH is an open-source project designed to provide advanced tools and techniq
     ```
 3. Start the application:
     ```bash
-    npm start
+    npm run dev
     ```
 
 ## Usage

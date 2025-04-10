@@ -19,3 +19,36 @@ Royce Mathew
    * Contributed to cross-component communication patterns to enhance modularity and maintainability of the frontend codebase.
    * Worked with backend to define API and ensure seamless integration.
    * Performed frontend debugging and optimizations to improve load times, interactivity, and responsiveness across devices.
+
+Alyesha Singh
+   * Assisted in debugging both frontend and backend issues throughout development, including resolving asynchronous data handling errors.
+   * Contributed to the frontend by building and styling reusable UI components using Shadcn UI and Tailwind CSS.
+   * Helped set up route management using React Router and optimized navigation for better UX.
+   * Worked on backend endpoints related to user settings and preferences using Express.js.
+   * Conducted extensive manual testing and participated in code reviews to ensure stability and maintainability.
+   * Helped implement loading states, error boundaries, and conditional rendering for a smoother user experience
+
+Michael Ispahani
+   * Developed helper utilities for the backend to streamline data formatting, logging, and error handling.
+   * Implemented part of the OSINT collection module’s logic and worked with API integration for threat intelligence data.
+   * Assisted in designing responsive layouts and improving mobile usability of dashboard pages.
+   * Collaborated closely with others to ensure consistent design system implementation across pages.
+   * Contributed to deployment scripts and environment configuration setup for testing and production builds.
+   * Helped fix CORS issues and refined API communication between the frontend and backend during development.
+
+Freza Majithia
+   * Took lead on testing and quality assurance — wrote unit tests using Jest and integration tests with Postman.
+   * Helped optimize backend performance by profiling slow queries and refining SQL joins.
+   * Co-developed the vulnerability scan result parser and connected it to the visualization dashboard.
+   * Built several utility React components used across the dashboard (e.g., modals, tooltips, and form inputs).
+   * Collaborated in team standups to triage bugs and assign fixes efficiently.
+   * Worked to troubleshoot WebSocket-based real-time updates and ensure smooth data streaming.
+
+
+
+
+
+
+
+
+

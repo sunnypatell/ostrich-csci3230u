@@ -57,14 +57,8 @@ function initDb() {
     );
   `);
 
-  // Check if admin user exists, if not create one
-  const adminUser = db.prepare('SELECT * FROM users WHERE username = ?').get('admin');
-  if (!adminUser) {
-    // Create default admin user with password 'admin123'
-    createUser('admin', 'admin123', 'admin@ostrich.local', 'admin');
-    createUser('sunny.admin', 'sunny123', 'sunny.admin@ostrich.local', 'admin'); // name, pwd, smtp, role
-    console.log('Created default admin user');
-  }
+  // Removed default admin seeding for security; create admin account via environment or setup script.
+
 }
 
 // Initialize the database

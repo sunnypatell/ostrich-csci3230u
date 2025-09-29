@@ -3,7 +3,10 @@ import { SignJWT, jwtVerify } from 'jose';
 import { authenticateUser, getUserById } from './db';
 
 // Secret key for JWT signing - in production, use a proper secret management system
-const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET || 'ostrich_secret_key_change_in_production');
+if (!process.env.JWT_SECRET) {
+  throw new Error('JWT_SECRET environment variable is not set');
+}
+const JWT_SECRET = new TextEncoder().encode(process.env.JWT_SECRET as string);
 
 // Token expiration time
 const EXPIRES_IN = '8h';
